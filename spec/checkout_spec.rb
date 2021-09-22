@@ -11,4 +11,8 @@ describe Checkout do
       expect(subject.items).to include item
     end
   end
+
+  describe "#total" do
+    it {is_expected.to respond_to(:total)}
+  end
 end
