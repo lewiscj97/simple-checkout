@@ -4,6 +4,6 @@ class Item
   end
 
   def get_price
-    "£#{@price}"
+    "£%0.2f" % @price
   end
 end
