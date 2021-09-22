@@ -6,6 +6,6 @@ class Item
   attr_reader :price
 
   def get_price
-    "£%0.2f" % @price
+    PriceFormatter.format(price)
   end
 end

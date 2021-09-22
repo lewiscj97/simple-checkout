@@ -1,3 +1,5 @@
+require_relative 'price_formatter'
+
 class Checkout
   def initialize
     @items = []
@@ -12,6 +14,6 @@ class Checkout
   def total
     total = 0
     @items.each {|item| total += item.price}
-    "£%0.2f" % total
+    PriceFormatter.format(total)
   end
 end
