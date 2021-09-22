@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
+# Module to format prices in the correct £xx.xx format
 module PriceFormatter
-  def self.format(float)
-    "£%0.2f" % float
+  def self.process(float)
+    format('£%0.2f', float)
   end
 end
