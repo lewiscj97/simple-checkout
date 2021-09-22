@@ -26,7 +26,9 @@ describe Checkout do
 
       expect(subject.total).to eq "£4.80"
     end
+  end
 
+  describe "functional test" do
     it "returns the total in correct format using real items" do
       apple = Item.new(0.80)
       juice = Item.new(1.50)
