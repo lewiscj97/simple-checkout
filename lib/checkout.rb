@@ -1,4 +1,5 @@
 require_relative 'price_formatter'
+require_relative 'item'
 
 class Checkout
   def initialize
@@ -12,8 +13,7 @@ class Checkout
   end
 
   def total
-    total = calculate_total
-    PriceFormatter.format(total)
+    "Total: " + PriceFormatter.format(calculate_total)
   end
 
   def calculate_total

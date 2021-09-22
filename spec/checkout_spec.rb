@@ -24,7 +24,7 @@ describe Checkout do
       subject.scan_item(orange)
       subject.scan_item(chicken)
 
-      expect(subject.total).to eq "£4.80"
+      expect(subject.total).to eq "Total: £4.80"
     end
   end
 
@@ -36,7 +36,7 @@ describe Checkout do
       subject.scan_item(apple)
       subject.scan_item(juice)
 
-      expect(subject.total).to eq "£2.30"
+      expect(subject.total).to eq "Total: £2.30"
     end
   end
 end
