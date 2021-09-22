@@ -9,7 +9,7 @@ describe Item do
 
     it "returns the price in £xx.xx format" do
       item = Item.new(1.00)
-      expect(item.get_price).to rq "£1.00"
+      expect(item.get_price).to eq "£1.00"
     end
   end
 end
