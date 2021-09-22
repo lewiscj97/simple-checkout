@@ -26,5 +26,15 @@ describe Checkout do
 
       expect(subject.total).to eq "£4.80"
     end
+
+    it "returns the total in correct format using real items" do
+      apple = Item.new(0.80)
+      juice = Item.new(1.50)
+
+      subject.scan_item(apple)
+      subject.scan_item(juice)
+
+      expect(subject.total).to eq "£2.30"
+    end
   end
 end
