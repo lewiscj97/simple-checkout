@@ -13,7 +13,7 @@ class Checkout
   end
 
   def total
-    "Total: " + PriceFormatter.format(calculate_total)
+    "Total: #{PriceFormatter.format(calculate_total)}"
   end
 
   def calculate_total
