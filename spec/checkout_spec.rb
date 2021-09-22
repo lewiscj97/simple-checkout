@@ -10,6 +10,5 @@ describe Checkout do
       subject.scan_item(item)
       expect(subject.items).to include item
     end
-
   end
 end
