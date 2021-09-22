@@ -12,8 +12,13 @@ class Checkout
   end
 
   def total
+    total = calculate_total
+    PriceFormatter.format(total)
+  end
+
+  def calculate_total
     total = 0
     @items.each {|item| total += item.price}
-    PriceFormatter.format(total)
+    total
   end
 end
