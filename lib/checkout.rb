@@ -8,4 +8,8 @@ class Checkout
   def scan_item(item)
     @items << item
   end
+
+  def total
+    
+  end
 end
