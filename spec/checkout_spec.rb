@@ -2,6 +2,10 @@ require 'checkout'
 require 'item'
 
 describe Checkout do
+  let(:banana) {double :banana, price: 0.50}
+  let(:orange) {double :orange, price: 0.80}
+  let(:chicken) {double :chicken, price: 3.50}
+
   describe "#scan_item" do
     it {is_expected.to respond_to(:scan_item)}
     
@@ -14,5 +18,13 @@ describe Checkout do
 
   describe "#total" do
     it {is_expected.to respond_to(:total)}
+
+    it "returns the total of all items in £xx.xx format" do
+      subject.scan_item(banana)
+      subject.scan_item(orange)
+      subject.scan_item(chicken)
+
+      expect(subject.total).to eq "£4.80"
+    end
   end
 end
